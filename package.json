@@ -1,0 +1,63 @@
+{
+  "name": "zero-config-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint 'src/**/*.js' 'src/**/*jsx'",
+    "test": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "clean": "rimraf coverage build node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msopanen/zero-config-react-app"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "ES6",
+    "ESlint",
+    "Jest",
+    "Enzyme",
+    "HMR"
+  ],
+  "author": "msopanen",
+  "license": "MIT",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/setupTests.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.17"
+  },
+  "devDependencies": {
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "enzyme-to-json": "^3.2.2",
+    "eslint-plugin-header": "^1.2.0"
+  }
+}
